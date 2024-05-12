@@ -1,6 +1,11 @@
 const fs = require("fs");
 
 try {
+  // Check if contributors.json file exists
+  if (!fs.existsSync("contributors.json")) {
+    throw new Error("contributors.json file not found.");
+  }
+
   // Read contributors.json file
   const contributorsData = JSON.parse(
     fs.readFileSync("contributors.json", "utf8")
