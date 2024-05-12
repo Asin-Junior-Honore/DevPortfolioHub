@@ -14,7 +14,6 @@ Each link is a gateway to a world of innovation, a testament to dedication, and 
 
 <!-- CONTRIBUTORS_END -->
 
-## License
 
 ## How to Contribute
 
