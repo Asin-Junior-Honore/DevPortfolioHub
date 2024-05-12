@@ -8,7 +8,7 @@ Here, you'll find a treasure trove of creativity, passion, and expertise. Dive i
 
 Each link is a gateway to a world of innovation, a testament to dedication, and a glimpse into the future of technology. So go ahead, click, explore, and be inspired! 💼💡
 
-## Contributors
+## Contributors/Portfolios
 
 <!-- CONTRIBUTORS_START -->
 
@@ -16,4 +16,12 @@ Each link is a gateway to a world of innovation, a testament to dedication, and 
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+## How to Contribute
+
+Want to add your portfolio to this prestigious collection? Follow these simple steps:
+
+1. **Add Your Portfolio**: Open the [CONTRIBUTING.md](https://github.com/Asin-Junior-Honore/DevPortfolioHub/blob/main/CONTRIBUTING.md) file and follow the instructions to add your details to the `contributors.json` file.
+
+2. **Submit a Pull Request**: After adding your portfolio, submit a pull request to have your changes reviewed and merged into the main repository.
+
+3. **Spread the Word**: Share the project with your friends and colleagues to grow our community and showcase even more amazing portfolios!
