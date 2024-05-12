@@ -11,7 +11,13 @@ Each link is a gateway to a world of innovation, a testament to dedication, and 
 ## Contributors
 
 <!-- CONTRIBUTORS_START -->
+<<<<<<< HEAD
 
+=======
+- [alex](https://keep.google.com/#NOTE/1eIp56ZCQ8aaISqtinmkTGD_7Wrm_qf3jv5M7v_2-AsovFkdIfPW-nL6q-7eH)
+- [honore](https://keep.google.com/#NOTE/1eIp56ZCQ8aaISqtinmkTGD_7Wrm_qf3jv5M7v_2-AsovFkdIfPW-nL6q-7eH)
+- [Your Full Name](Link to Your Portfolio)
+>>>>>>> 2c2955a87d7a0ce31e4c6761909872b870eaab96
 <!-- CONTRIBUTORS_END -->
 
 ## License
