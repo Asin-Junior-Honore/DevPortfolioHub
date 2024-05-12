@@ -10,4 +10,4 @@ This project is a collaborative effort of developers contributing their portfoli
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE)
