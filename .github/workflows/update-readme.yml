@@ -30,10 +30,22 @@ jobs:
       - name: Run updateReadme script
         run: node updateReadme.js
 
-      - name: Commit changes
+      - name: Remove contributors.json
+        run: |
+          rm contributors.json
+          git add .
+          git commit -m "Remove contributors.json file"
+          git push origin HEAD:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set Git user identity
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+
+      - name: Commit changes
+        run: |
           git add README.md
           git commit -m "Automatically update README.md"
           git push origin HEAD:main
