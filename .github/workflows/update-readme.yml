@@ -4,18 +4,12 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    types: [closed]
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check if PR is merged
-        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged
-        run: echo "Pull request merged, triggering update..."
-
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -30,19 +24,12 @@ jobs:
       - name: Run updateReadme script
         run: node updateReadme.js
 
-      - name: Remove contributors.json
-        run: |
-          rm contributors.json
-
-      - name: Set Git user identity
-        run: |
-          git config --local user.email "${{ secrets.MY_GITHUB_EMAIL }}"
-          git config --local user.name "${{ secrets.MY_GITHUB_USERNAME }}"
-
       - name: Commit changes
         run: |
-          git add .
-          git commit -m "Remove contributors.json file"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Automatically update README.md"
           git push origin HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
