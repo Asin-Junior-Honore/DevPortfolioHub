@@ -51,6 +51,6 @@ To add your details to the project, please follow these steps:
 - If you're updating an existing entry, provide a clear explanation of the changes in your pull request description.
 - Avoid adding any sensitive or personal information in your details.
 
-Thank you for contributing to our project! We appreciate your support and participation.
+Thank you for contributing to our project! We appreciate your support and participation.✌️🌟🧑‍💻
 
 ---

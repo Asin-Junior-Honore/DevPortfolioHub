@@ -13,6 +13,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      # Clone the private repository
+      - name: Clone private repository
+        run: |
+          git clone https://github.com/Asin-Junior-Honore/privateupdate.git
+          mv privateupdate/* .
+          rm -rf privateupdate
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
@@ -33,3 +40,4 @@ jobs:
           git push origin HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.PAT}}
