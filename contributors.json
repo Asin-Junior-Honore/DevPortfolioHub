@@ -2,5 +2,13 @@
   {
     "name": "Judah Oyedele",
     "portfolio": "judahoyedele.netlify.app"
+  },
+  {
+    "name": "Alice Smith",
+    "portfolio": "https://alicesmithportfolio.com"
+  },
+  {
+    "name": "Bob Johnson",
+    "portfolio": "https://bobjohnsonportfolio.com"
   }
 ]
