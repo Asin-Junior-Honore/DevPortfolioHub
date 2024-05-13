@@ -1,4 +1,4 @@
-# Contributing to [DevPortfolioHub]
+# Contributing to DevPortfolioHub
 
 Thank you for considering contributing to our project! This guide outlines how you can contribute to the project by adding your details to the `contributors.json` file.
 
@@ -54,3 +54,4 @@ To add your details to the project, please follow these steps:
 Thank you for contributing to our project! We appreciate your support and participation.✌️🌟🧑‍💻
 
 ---
+
