@@ -11,7 +11,7 @@ Each link is a gateway to a world of innovation, a testament to dedication, and 
 ## Contributors/Portfolios
 
 <!-- CONTRIBUTORS_START -->
-- [Judah Oyedele](judahoyedele.netlify.app)
+
 <!-- CONTRIBUTORS_END -->
 
 
