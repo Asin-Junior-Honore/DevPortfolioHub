@@ -11,7 +11,8 @@ Each link is a gateway to a world of innovation, a testament to dedication, and 
 ## Contributors/Portfolios
 
 <!-- CONTRIBUTORS_START -->
-
+- [Jane Smith](https://janesportfolio.com)
+- [John Doe](https://johnsportfolio.com)
 <!-- CONTRIBUTORS_END -->
 
 
