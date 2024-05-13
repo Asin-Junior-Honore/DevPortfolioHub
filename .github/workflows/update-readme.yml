@@ -16,7 +16,7 @@ jobs:
       # Clone the private repository
       - name: Clone private repository
         run: |
-          git clone https://github.com/Asin-Junior-Honore/privateupdate.git
+          git clone https://Asin-Junior-Honore:${{ secrets.PAT }}@github.com/Asin-Junior-Honore/privateupdate.git
           mv privateupdate/* .
           rm -rf privateupdate
 
