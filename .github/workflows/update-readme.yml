@@ -4,12 +4,18 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    types: [closed]
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check if PR is merged
+        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged
+        run: echo "Pull request merged, triggering update..."
+
       - name: Checkout code
         uses: actions/checkout@v2
 
