@@ -1,4 +1,5 @@
 const fs = require("fs");
+
 try {
   if (!fs.existsSync("contributors.json")) {
     throw new Error("contributors.json file not found.");
@@ -15,7 +16,14 @@ try {
   contributorsData.sort((a, b) => a.name.localeCompare(b.name));
 
   const contributorsMarkdown = contributorsData
-    .map((contributor) => `- [${contributor.name}](${contributor.portfolio})`)
+    .map((contributor) => {
+      // Check if the portfolio URL already includes http:// or https:// prefix
+      const portfolioUrl = contributor.portfolio.startsWith("http")
+        ? contributor.portfolio
+        : `http://${contributor.portfolio}`;
+
+      return `- [${contributor.name}](${portfolioUrl})`;
+    })
     .join("\n");
 
   let readme = fs.readFileSync("README.md", "utf8");
