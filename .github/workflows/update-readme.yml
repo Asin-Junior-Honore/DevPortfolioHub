@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    types: [closed]
 
 jobs:
   update-readme:
@@ -26,11 +24,12 @@ jobs:
       - name: Run updateReadme script
         run: node updateReadme.js
 
-      - name: Remove contributors.json
+      - name: Commit changes
         run: |
-          rm contributors.json
-          git add .
-          git commit -m "Remove contributors.json file"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Automatically update README.md"
           git push origin HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
