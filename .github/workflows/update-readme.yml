@@ -33,21 +33,16 @@ jobs:
       - name: Remove contributors.json
         run: |
           rm contributors.json
-          git add .
-          git commit -m "Remove contributors.json file"
-          git push origin HEAD:main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set Git user identity
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "${{ secrets.MY_GITHUB_EMAIL }}"
+          git config --local user.name "${{ secrets.MY_GITHUB_USERNAME }}"
 
       - name: Commit changes
         run: |
-          git add README.md
-          git commit -m "Automatically update README.md"
+          git add .
+          git commit -m "Remove contributors.json file"
           git push origin HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
