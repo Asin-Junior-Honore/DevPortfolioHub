@@ -16,7 +16,7 @@ jobs:
       # Clone the private repository
       - name: Clone private repository
         run: |
-          git clone https://github.com/Asin-Junior-Honore/pivateupdate.git
+          git clone https://github.com/Asin-Junior-Honore/privateupdate.git
           mv privateupdate/* .
           rm -rf privateupdate
 
@@ -40,4 +40,4 @@ jobs:
           git push origin HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PERSONAL_ACCESS_TOKEN: ${{ secrets.PAT}}
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.PAT }}
