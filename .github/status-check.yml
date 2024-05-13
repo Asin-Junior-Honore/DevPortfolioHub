@@ -1,0 +1,20 @@
+name: File Presence Check
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  check-file-presence:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Check if contributors.json exists
+        run: |
+          if [ ! -f contributors.json ]; then
+            echo "Error: contributors.json file not found."
+            exit 1
+          fi
