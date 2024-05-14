@@ -12,6 +12,12 @@ Each link is a gateway to a world of innovation, a testament to dedication, and 
 
 <!-- CONTRIBUTORS_START -->
 
+* [Alice Smith](https://alicesmithportfolio.com)
+* [Bob Johnson](https://bobjohnsonportfolio.com)
+* [Gabriel Michael Ojomakpene [codewitgabi]](https://codewitgabi.vercel.app)
+* [JC CODER](https://jc-coder.vercel.app)
+* [Judah Oyedele](http://judahoyedele.netlify.app)
+* [Stephen Omoregie](https://cre8stevedev.me)
 <!-- CONTRIBUTORS_END -->
 
 ## How to Contribute
