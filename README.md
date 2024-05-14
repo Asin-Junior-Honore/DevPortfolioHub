@@ -11,10 +11,7 @@ Each link is a gateway to a world of innovation, a testament to dedication, and 
 ## Contributors/Portfolios
 
 <!-- CONTRIBUTORS_START -->
-- [Alice Smith](https://alicesmithportfolio.com)
-- [Bob Johnson](https://bobjohnsonportfolio.com)
-- [Judah Oyedele](https://judahoyedele.netlify.app)
-- [Stephen Omoregie](https://cre8stevedev.me)
+- [JC CODER](https://jc-coder.vercel.app)
 <!-- CONTRIBUTORS_END -->
 
 
