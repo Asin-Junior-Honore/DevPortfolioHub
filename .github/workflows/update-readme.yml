@@ -36,8 +36,8 @@ jobs:
 
       - name: Set Git user identity
         run: |
-          git config --local user.email "${{ secrets.MY_GITHUB_EMAIL }}"
-          git config --local user.name "${{ secrets.MY_GITHUB_USERNAME }}"
+          git config --local user.email "asinhonore823@gmail.com"
+          git config --local user.name "Asin-Junior-Honore"
 
       - name: Commit changes
         run: |
