@@ -1,13 +1,16 @@
 name: Update README
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     types: [closed]
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged # Only run when the pull request is merged
+    if: github.event_name == 'pull_request' && github.event.pull_request.merged || github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout code
@@ -23,15 +26,9 @@ jobs:
 
       - name: Merge contributors from pull request
         run: |
-
           new_contributors=$(jq -s 'flatten | unique_by(.name)' contributors.json)
-
-
           existing_contributors=$(awk '/<!-- CONTRIBUTORS_START -->/,/<!-- CONTRIBUTORS_END -->/' README.md | grep -vE "<!-- CONTRIBUTORS_(START|END) -->")
-
-
           all_contributors=$(echo -e "$existing_contributors\n$new_contributors" | sort | uniq)
-
           sed -i -e "/<!-- CONTRIBUTORS_START -->/,/<!-- CONTRIBUTORS_END -->/c\\
           <!-- CONTRIBUTORS_START -->\\
           $all_contributors\\
