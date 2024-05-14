@@ -48,4 +48,6 @@ jobs:
 
       - name: Delete contributors.json
         run: |
-          rm contributors.json
+          if [[ -f contributors.json ]]; then
+            rm contributors.json
+          fi
