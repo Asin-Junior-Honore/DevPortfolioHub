@@ -45,3 +45,7 @@ jobs:
           git push origin HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Delete contributors.json
+        run: |
+          rm contributors.json
