@@ -26,7 +26,7 @@ jobs:
 
       - name: Merge contributors from pull request
         run: |
-          new_contributors=$(jq -r '.[] | "[\(.name)](\(.portfolio))"' contributors.json)
+          new_contributors=$(jq -r '.[] | "* [\(.name)](\(.portfolio))"' contributors.json)
           existing_contributors=$(awk '/<!-- CONTRIBUTORS_START -->/,/<!-- CONTRIBUTORS_END -->/' README.md | grep -vE "<!-- CONTRIBUTORS_(START|END) -->")
           all_contributors=$(echo -e "$existing_contributors\n$new_contributors" | sort | uniq)
           echo "$all_contributors" > temp.txt
