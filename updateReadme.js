@@ -22,7 +22,7 @@ try {
         ? contributor.portfolio
         : `http://${contributor.portfolio}`;
 
-      return `- [${contributor.name}](${portfolioUrl})`;
+      return `* [${contributor.name}](${portfolioUrl})`;
     })
     .join("\n");
 
@@ -43,5 +43,5 @@ try {
 
   console.log("Readme updated successfully!");
 } catch (error) {
-  console.error("Error updating readme:", error.message)
+  console.error("Error updating readme:", error.message);
 }
