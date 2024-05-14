@@ -8,10 +8,9 @@
   { "name": "Bob Johnson", "portfolio": "https://bobjohnsonportfolio.com" },
   { "name": "Judah Oyedele", "portfolio": "http://judahoyedele.netlify.app" },
   { "name": "Stephen Omoregie", "portfolio": "https://cre8stevedev.me" },
-  [
-    {
-      "name": "Gabriel Michael Ojomakpene [codewitgabi]",
-      "portfolio": "https://codewitgabi.vercel.app"
-    }
-  ]
+
+  {
+    "name": "Gabriel Michael Ojomakpene [codewitgabi]",
+    "portfolio": "https://codewitgabi.vercel.app"
+  }
 ]
