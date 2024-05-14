@@ -46,8 +46,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Delete contributors.json
+      - name: Remove contributors.json
         run: |
-          if [[ -f contributors.json ]]; then
-            rm contributors.json
-          fi
+          rm contributors.json
