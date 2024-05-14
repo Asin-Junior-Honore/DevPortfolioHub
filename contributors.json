@@ -2,5 +2,10 @@
   {
     "name": "JC CODER",
     "portfolio": "https://jc-coder.vercel.app"
-  }
+  },
+
+  { "name": "Alice Smith", "portfolio": "https://alicesmithportfolio.com" },
+  { "name": "Bob Johnson", "portfolio": "https://bobjohnsonportfolio.com" },
+  { "name": "Judah Oyedele", "portfolio": "http://judahoyedele.netlify.app" },
+  { "name": "Stephen Omoregie", "portfolio": "https://cre8stevedev.me" }
 ]
