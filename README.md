@@ -13,6 +13,7 @@ Each link is a gateway to a world of innovation, a testament to dedication, and 
 <!-- CONTRIBUTORS_START -->
 
 * [Alice Smith](https://alicesmithportfolio.com)
+* [Asin Honore](https://asin-honore.vercel.app)
 * [Bob Johnson](https://bobjohnsonportfolio.com)
 * [Gabriel Michael Ojomakpene [codewitgabi]](https://codewitgabi.vercel.app)
 * [JC CODER](https://jc-coder.vercel.app)
