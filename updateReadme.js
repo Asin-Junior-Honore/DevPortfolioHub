@@ -45,10 +45,6 @@ try {
   fs.writeFileSync("README.md", readme, "utf8");
 
   console.log("Readme updated successfully!");
-
-  // Delete contributors.json file
-  fs.unlinkSync("contributors.json");
-  console.log("contributors.json file deleted successfully!");
 } catch (error) {
   console.error("Error updating readme:", error.message);
 }
