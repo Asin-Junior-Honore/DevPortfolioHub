@@ -36,8 +36,7 @@ jobs:
           existing_contributors=$(awk '/<!-- CONTRIBUTORS_START -->/,/<!-- CONTRIBUTORS_END -->/' README.md | grep -vE "<!-- CONTRIBUTORS_(START|END) -->")
           all_contributors=$(echo -e "$existing_contributors\n$new_contributors" | sort | uniq)
           echo "$all_contributors" > temp.txt
-          sed -i -e '/<!-- CONTRIBUTORS_START -->/,/<!-- CONTRIBUTORS_END -->/{ /<!-- CONTRIBUTORS_START -->/{p; r temp.txt
-          }; /<!-- CONTRIBUTORS_END -->/p; d }' README.md
+          sed -i -e '/<!-- CONTRIBUTORS_START -->/,/<!-- CONTRIBUTORS_END -->/{ /<!-- CONTRIBUTORS_START -->/{r temp.txt}; /<!-- CONTRIBUTORS_END -->/d }' README.md
           echo "" > contributors.json  # Clear contributors.json file
 
       - name: Set Git user identity
@@ -52,6 +51,3 @@ jobs:
           git push origin HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Remove temp.txt
-        run: rm temp.txt
