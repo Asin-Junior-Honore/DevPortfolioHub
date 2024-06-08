@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Merge contributors from pull request
+      - name: Merge contributors from pull request and remove contributors.json
         run: |
           new_contributors=$(jq -r '.[] | "* [\(.name)](\(.portfolio))"' contributors.json)
           existing_contributors=$(awk '/<!-- CONTRIBUTORS_START -->/,/<!-- CONTRIBUTORS_END -->/' README.md | grep -vE "<!-- CONTRIBUTORS_(START|END) -->")
@@ -32,7 +32,8 @@ jobs:
           echo "$all_contributors" > temp.txt
           sed -i -e '/<!-- CONTRIBUTORS_START -->/,/<!-- CONTRIBUTORS_END -->/{ /<!-- CONTRIBUTORS_START -->/{p; r temp.txt
           }; /<!-- CONTRIBUTORS_END -->/p; d }' README.md
-
+          rm -f contributors.json
+          
       - name: Set Git user identity
         run: |
           git config --local user.email "asinhonore823@gmail.com"
@@ -41,11 +42,7 @@ jobs:
       - name: Commit changes
         run: |
           git add README.md
-          git commit -m "Update README with merged contributors"
+          git commit -m "Update README with merged contributors and remove contributors.json"
           git push origin HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Clear contributors.json
-        run: |
-          truncate -s 0 contributors.json
