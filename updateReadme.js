@@ -18,9 +18,9 @@ try {
   const contributorsMarkdown = contributorsData
     .map((contributor) => {
       // Check if the portfolio URL already includes http:// or https:// prefix
-      const portfolioUrl = contributor.portfolio.startsWith("http")
+      const portfolioUrl = /^https?:\/\//.test(contributor.portfolio)
         ? contributor.portfolio
-        : `http://${contributor.portfolio}`;
+        : `https://${contributor.portfolio}`;
 
       // Escape special characters in the contributor name
       const encodedName = encodeURI(contributor.name);
@@ -45,6 +45,10 @@ try {
   fs.writeFileSync("README.md", readme, "utf8");
 
   console.log("Readme updated successfully!");
+
+  // Delete contributors.json file
+  fs.unlinkSync("contributors.json");
+  console.log("contributors.json file deleted successfully!");
 } catch (error) {
   console.error("Error updating readme:", error.message);
 }

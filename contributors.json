@@ -1,7 +1,7 @@
 [
   {
     "name": "Abdullah Ayoola",
-    "portfolio": "http://ayooladev.vercel.app/"
+    "portfolio": "https://ayooladev.vercel.app/"
   },
   {
     "name": "JC CODER",
@@ -9,7 +9,7 @@
   },
   {
     "name": "Judah Oyedele",
-    "portfolio": "http://judahoyedele.netlify.app"
+    "portfolio": "https://judahoyedele.netlify.app"
   },
   {
     "name": "Stephen Omoregie",
@@ -22,5 +22,10 @@
   {
     "name": "Asin Honore",
     "portfolio": "https://asin-honore.vercel.app"
+  },
+
+  {
+    "name": "Mudashir Roheemoh Oluwabukola",
+    "portfolio": "https://mudashir-roheemoh.vercel.app/"
   }
 ]
