@@ -10,9 +10,12 @@ on:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && github.event.pull_request.merged || github.ref == 'refs/heads/main' # Run when PR is merged or when pushing to main branch
 
     steps:
+      - name: Check if PR is merged
+        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged
+        run: echo "Pull request merged, triggering update..."
+
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -24,6 +27,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Run updateReadme script
+        run: node updateReadme.js
+
+      - name: Remove contributors.json
+        run: |
+          rm contributors.json
+
       - name: Merge contributors from pull request and remove contributors.json
         run: |
           new_contributors=$(jq -r '.[] | "* [\(.name)](\(.portfolio))"' contributors.json)
@@ -32,8 +42,7 @@ jobs:
           echo "$all_contributors" > temp.txt
           sed -i -e '/<!-- CONTRIBUTORS_START -->/,/<!-- CONTRIBUTORS_END -->/{ /<!-- CONTRIBUTORS_START -->/{p; r temp.txt
           }; /<!-- CONTRIBUTORS_END -->/p; d }' README.md
-          rm -f contributors.json
-          
+
       - name: Set Git user identity
         run: |
           git config --local user.email "asinhonore823@gmail.com"
@@ -41,8 +50,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git add README.md
-          git commit -m "Update README with merged contributors and remove contributors.json"
+          git add .
+          git commit -m "Update README with merged contributors"
           git push origin HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
