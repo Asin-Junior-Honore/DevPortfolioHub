@@ -36,8 +36,8 @@ jobs:
 
       - name: Set Git user identity
         run: |
-          git config --local user.email "asinhonore823@gmail.com"
-          git config --local user.name "Asin-Junior-Honore"
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
       - name: Commit changes
         run: |
