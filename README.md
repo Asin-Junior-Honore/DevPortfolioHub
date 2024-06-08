@@ -12,12 +12,6 @@ Each link is a gateway to a world of innovation, a testament to dedication, and 
 
 <!-- CONTRIBUTORS_START -->
 
-* [<ReactMode />](http://ayooladev.vercel.app/)
-* [Asin Honore](https://asin-honore.vercel.app)
-* [Gabriel Michael Ojomakpene [codewitgabi]](https://codewitgabi.vercel.app)
-* [JC CODER](https://jc-coder.vercel.app)
-* [Judah Oyedele](http://judahoyedele.netlify.app)
-* [Stephen Omoregie](https://cre8stevedev.me)
 <!-- CONTRIBUTORS_END -->
 
 ## How to Contribute

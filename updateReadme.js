@@ -22,7 +22,10 @@ try {
         ? contributor.portfolio
         : `http://${contributor.portfolio}`;
 
-      return `* [${contributor.name}](${portfolioUrl})`;
+      // Escape special characters in the contributor name
+      const encodedName = encodeURI(contributor.name);
+
+      return `* [${encodedName}](${portfolioUrl})`;
     })
     .join("\n");
 
