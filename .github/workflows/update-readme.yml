@@ -32,7 +32,6 @@ jobs:
           echo "$all_contributors" > temp.txt
           sed -i -e '/<!-- CONTRIBUTORS_START -->/,/<!-- CONTRIBUTORS_END -->/{ /<!-- CONTRIBUTORS_START -->/{p; r temp.txt
           }; /<!-- CONTRIBUTORS_END -->/p; d }' README.md  
-          echo "" > contributors.json  # Clear contributors.json file
 
       - name: Set Git user identity
         run: |
@@ -44,5 +43,6 @@ jobs:
           git add README.md contributors.json
           git commit -m "Update README with merged contributors"
           git push origin HEAD:main
+          rm contributors.json  # Delete contributors.json file after committing changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
