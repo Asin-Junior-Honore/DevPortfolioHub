@@ -22,8 +22,8 @@ try {
         ? contributor.portfolio
         : `https://${contributor.portfolio}`;
 
-      // Escape special characters in the contributor name
-      const encodedName = encodeURI(contributor.name);
+      // Encode special characters in the contributor name
+      const encodedName = encodeURIComponent(contributor.name);
 
       return `* [${encodedName}](${portfolioUrl})`;
     })
