@@ -27,16 +27,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run updateReadme script
-        run: node updateReadme.js
-
       - name: Merge contributors from pull request and clear contributors.json
         run: |
           new_contributors=$(jq -r '.[] | "* [\(.name)](\(.portfolio))"' contributors.json)
           existing_contributors=$(awk '/<!-- CONTRIBUTORS_START -->/,/<!-- CONTRIBUTORS_END -->/' README.md | grep -vE "<!-- CONTRIBUTORS_(START|END) -->")
           all_contributors=$(echo -e "$existing_contributors\n$new_contributors" | sort | uniq)
           echo "$all_contributors" > temp.txt
-          sed -i -e '/<!-- CONTRIBUTORS_START -->/,/<!-- CONTRIBUTORS_END -->/{ /<!-- CONTRIBUTORS_START -->/{r temp.txt}; /<!-- CONTRIBUTORS_END -->/d }' README.md
+          sed -i -e '/<!-- CONTRIBUTORS_START -->/,/<!-- CONTRIBUTORS_END -->/{ /<!-- CONTRIBUTORS_START -->/{p; r temp.txt
+          /<!-- CONTRIBUTORS_END -->/p; d }' README.md
           echo "" > contributors.json  # Clear contributors.json file
 
       - name: Set Git user identity
