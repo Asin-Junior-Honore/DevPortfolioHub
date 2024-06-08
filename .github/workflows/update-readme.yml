@@ -30,7 +30,7 @@ jobs:
       - name: Run updateReadme script
         run: node updateReadme.js
 
-      - name: Merge contributors from pull request and remove contributors.json
+      - name: Merge contributors from pull request and clear contributors.json
         run: |
           new_contributors=$(jq -r '.[] | "* [\(.name)](\(.portfolio))"' contributors.json)
           existing_contributors=$(awk '/<!-- CONTRIBUTORS_START -->/,/<!-- CONTRIBUTORS_END -->/' README.md | grep -vE "<!-- CONTRIBUTORS_(START|END) -->")
@@ -38,10 +38,7 @@ jobs:
           echo "$all_contributors" > temp.txt
           sed -i -e '/<!-- CONTRIBUTORS_START -->/,/<!-- CONTRIBUTORS_END -->/{ /<!-- CONTRIBUTORS_START -->/{p; r temp.txt
           }; /<!-- CONTRIBUTORS_END -->/p; d }' README.md
-
-      - name: Remove contributors.json
-        run: |
-          rm contributors.json
+          echo "" > contributors.json  # Clear contributors.json file
 
       - name: Set Git user identity
         run: |
@@ -51,7 +48,7 @@ jobs:
       - name: Commit changes
         run: |
           git add .
-          git commit -m "Update README with merged contributors"
+          git commit -m "Update README with merged contributors and clear contributors.json"
           git push origin HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
