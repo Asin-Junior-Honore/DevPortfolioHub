@@ -48,4 +48,4 @@ jobs:
 
       - name: Clear contributors.json
         run: |
-          echo "" > contributors.json
+          truncate -s 0 contributors.json
