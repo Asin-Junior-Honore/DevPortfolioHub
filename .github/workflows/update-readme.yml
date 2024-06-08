@@ -46,6 +46,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Remove contributors.json
+      - name: Clear contributors.json
         run: |
-          rm -f contributors.json
+          echo "" > contributors.json
