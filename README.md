@@ -19,6 +19,7 @@ Each link is a gateway to a world of innovation, a testament to dedication, and 
 * [JC CODER](https://jc-coder.vercel.app)
 * [Judah Oyedele](https://judahoyedele.netlify.app)
 * [Mudashir Roheemoh Oluwabukola](https://mudashir-roheemoh.vercel.app/)
+* [Opeyemi Oduyemi](https://yemi.dev/)
 * [Stephen Omoregie](https://cre8stevedev.me)
 <!-- CONTRIBUTORS_END -->
 
