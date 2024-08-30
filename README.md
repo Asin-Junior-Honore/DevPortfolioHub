@@ -16,6 +16,7 @@ Each link is a gateway to a world of innovation, a testament to dedication, and 
 * [Adebowale Damilola Emmanuel](https://codewithdami.vercel.app)
 * [Asin Honore](https://asin-honore.vercel.app)
 * [Ayooluwa Ariwoola](https://eniolufe.github.io/portfolio/)
+* [Demilade Akinyemi](3d-portfolio-xi-neon.vercel.app)
 * [Gabriel Michael Ojomakpene [codewitgabi]](https://codewitgabi.vercel.app)
 * [JC CODER](https://jc-coder.vercel.app)
 * [Judah Oyedele](https://judahoyedele.netlify.app)
