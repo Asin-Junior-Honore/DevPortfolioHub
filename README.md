@@ -15,6 +15,7 @@ Each link is a gateway to a world of innovation, a testament to dedication, and 
 * [Abdullah Ayoola](https://ayooladev.vercel.app/)
 * [Adebowale Damilola Emmanuel](https://codewithdami.vercel.app)
 * [Asin Honore](https://asin-honore.vercel.app)
+* [Ayomide Olaleye](https://ayscript.vercel.app)
 * [Ayooluwa Ariwoola](https://eniolufe.github.io/portfolio/)
 * [Demilade Akinyemi](https://3d-portfolio-xi-neon.vercel.app)
 * [Gabriel Michael Ojomakpene [codewitgabi]](https://codewitgabi.vercel.app)
