@@ -22,6 +22,7 @@ Each link is a gateway to a world of innovation, a testament to dedication, and 
 * [Iboi Osezele Ejemen](https://1732-portfolio.netlify.app/)
 * [JC CODER](https://jc-coder.vercel.app)
 * [Judah Oyedele](https://judahoyedele.netlify.app)
+* [Michael andreuzza](http://michaelandreuzza.com/)
 * [Mudashir Roheemoh Oluwabukola](https://mudashir-roheemoh.vercel.app/)
 * [Natan Asrat Yilma](https://natan-asrat.onrender.com/)
 * [Ojukwu Somkene](https://somkene-ojukwu.vercel.app)
