@@ -14,7 +14,6 @@ jobs:
       github.event.pull_request.merged == true &&
       github.repository == 'Asin-Junior-Honore/DevPortfolioHub'
 
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -45,7 +44,7 @@ jobs:
       - name: Commit changes
         run: |
           git add README.md contributors.json
-          git commit -m "Update README with merged contributors and deleted contributors.json file✌️🥲 "
+          git commit -m "Update README with merged contributors and deleted contributors.json file✌️🥲"
           git push origin HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
