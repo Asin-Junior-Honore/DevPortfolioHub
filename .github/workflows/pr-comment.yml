@@ -5,7 +5,7 @@ on:
     types: [opened]
 
 permissions:
-  pull-requests: write  # Ensures the workflow can comment on pull requests
+  pull-requests: 
 
 jobs:
   post-comment:
