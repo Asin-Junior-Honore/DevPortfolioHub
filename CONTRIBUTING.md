@@ -8,7 +8,7 @@ To add your details to the project, please follow these steps:
 
 1. **Fork the Repository**: Click on the "Fork" button at the top right corner of the repository page to create a copy of the repository in your GitHub account.
 
-2. **Clone the Repository**: Clone the forked repository to your local machine using the following command in your terminal or command prompt:
+2. **Clone the Repository**: Clone the forked repository to your local machine using the following command in your terminal or command prompt: 
 
    ```bash
    git clone https://github.com/your-username/your-repository.git
