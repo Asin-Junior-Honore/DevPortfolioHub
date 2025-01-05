@@ -5,21 +5,14 @@ on:
     types: [opened]
 
 jobs:
-  add-comment:
+  post-comment:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Add a comment to the PR
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const prNumber = context.payload.pull_request.number;
-            const repoOwner = context.repo.owner;
-            const repoName = context.repo.repo;
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-            await github.rest.issues.createComment({
-              owner: repoOwner,
-              repo: repoName,
-              issue_number: prNumber,
-              body: "Thank you for opening a pull request! 🚀 We will review it soon. Stay tuned!😊✌️"
-            });
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v1
+        with:
+          message: 'Thank you for opening a pull request! 🚀 We will review it soon. Stay tuned!😊✌️'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
