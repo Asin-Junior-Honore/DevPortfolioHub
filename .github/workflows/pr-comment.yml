@@ -14,5 +14,5 @@ jobs:
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@v1
         with:
-          message: 'Thank you for opening a pull request! 🚀 We will review it soon. Stay tuned!😊✌️'
+          message: 'Thank you for opening a pull request! 🚀 We will review it soon. Stay tuned!😊✌️ '
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
