@@ -21,5 +21,5 @@ jobs:
               owner: repoOwner,
               repo: repoName,
               issue_number: prNumber,
-              body: "Thank you for opening a pull request! 🚀 We will review it soon. Stay tuned! 😊✌️"
+              body: "Thank you for opening a pull request! 🚀 We will review it soon. Stay tuned!😊✌️"
             });
