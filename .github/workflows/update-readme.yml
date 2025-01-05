@@ -10,14 +10,12 @@ on:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
-    if: >
-      github.event.pull_request.merged == true &&
-      github.repository == 'Asin-Junior-Honore/DevPortfolioHub'
+    if: github.event.pull_request.merged == true || github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
