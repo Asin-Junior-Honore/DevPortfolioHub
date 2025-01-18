@@ -28,6 +28,7 @@ Each link is a gateway to a world of innovation, a testament to dedication, and 
 * [Natan Asrat Yilma](https://natan-asrat.onrender.com/)
 * [Ojukwu Somkene](https://somkene-ojukwu.vercel.app)
 * [Opeyemi Oduyemi](https://yemi.dev/)
+* [Soumyodeep Dey](https://soumyodeep-dey.vercel.app/)
 * [Stephen Omoregie](https://cre8stevedev.me)
 <!-- CONTRIBUTORS_END -->
 
