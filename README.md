@@ -29,6 +29,7 @@ Each link is a gateway to a world of innovation, a testament to dedication, and 
 * [Ojukwu Somkene](https://somkene-ojukwu.vercel.app)
 * [Olusunmbola Oluwasijibomi](https://sijibomiio.vercel.app/)
 * [Opeyemi Oduyemi](https://yemi.dev/)
+* [Prasenjit Nayak](https://www.prasen.dev/)
 * [Soumyodeep Dey](https://soumyodeep-dey.vercel.app/)
 * [Stephen Omoregie](https://cre8stevedev.me)
 <!-- CONTRIBUTORS_END -->
